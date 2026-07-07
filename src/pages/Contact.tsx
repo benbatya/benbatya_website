@@ -48,13 +48,13 @@ export default function Contact() {
       <div className="grid gap-12 lg:grid-cols-2">
         {/* Intro */}
         <div>
-          <p className="text-xs font-semibold uppercase tracking-wider text-indigo-600 font-mono">
+          <p className="text-xs font-semibold uppercase tracking-wider text-accent-400 font-mono">
             Contact
           </p>
-          <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+          <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">
             Let's talk
           </h1>
-          <p className="mt-5 text-lg leading-relaxed text-slate-600">
+          <p className="mt-5 text-lg leading-relaxed text-slate-400">
             Have a project in AI tooling, high-performance systems, or graphics/XR? Send a few
             details and I'll get back to you.
           </p>
@@ -62,9 +62,9 @@ export default function Contact() {
           <div className="mt-8 space-y-4">
             <a
               href={`mailto:${profile.email}`}
-              className="flex items-center gap-3 text-slate-600 transition-colors hover:text-indigo-600"
+              className="flex items-center gap-3 text-slate-400 transition-colors hover:text-accent-400"
             >
-              <span className="grid h-10 w-10 place-items-center rounded-lg bg-slate-100">
+              <span className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-white/5">
                 <Mail size={18} />
               </span>
               {profile.email}
@@ -73,9 +73,9 @@ export default function Contact() {
               href={profile.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-3 text-slate-600 transition-colors hover:text-indigo-600"
+              className="flex items-center gap-3 text-slate-400 transition-colors hover:text-accent-400"
             >
-              <span className="grid h-10 w-10 place-items-center rounded-lg bg-slate-100">
+              <span className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-white/5">
                 <Linkedin size={18} />
               </span>
               linkedin.com/in/benjaminbatya
@@ -84,9 +84,9 @@ export default function Contact() {
               href={profile.github}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-3 text-slate-600 transition-colors hover:text-indigo-600"
+              className="flex items-center gap-3 text-slate-400 transition-colors hover:text-accent-400"
             >
-              <span className="grid h-10 w-10 place-items-center rounded-lg bg-slate-100">
+              <span className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-white/5">
                 <Github size={18} />
               </span>
               github.com/benbatya
@@ -95,7 +95,7 @@ export default function Contact() {
         </div>
 
         {/* Form */}
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+        <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 sm:p-8">
           <AnimatePresence mode="wait">
             {status === 'success' ? (
               <motion.div
@@ -105,19 +105,19 @@ export default function Contact() {
                 exit={{opacity: 0}}
                 className="flex flex-col items-center justify-center py-12 text-center"
               >
-                <span className="grid h-14 w-14 place-items-center rounded-full bg-emerald-50 text-emerald-600">
+                <span className="grid h-14 w-14 place-items-center rounded-full bg-accent-500/15 text-accent-400">
                   <CheckCircle2 size={30} />
                 </span>
-                <h2 className="mt-5 font-display text-xl font-semibold text-slate-900">
+                <h2 className="mt-5 font-display text-xl font-semibold text-white">
                   Message sent
                 </h2>
-                <p className="mt-2 max-w-xs text-sm text-slate-600">
+                <p className="mt-2 max-w-xs text-sm text-slate-400">
                   Thanks for reaching out — I'll reply to your email shortly.
                 </p>
                 <button
                   type="button"
                   onClick={() => setStatus('idle')}
-                  className="mt-6 text-sm font-semibold text-indigo-600 hover:text-indigo-700"
+                  className="mt-6 text-sm font-semibold text-accent-400 hover:text-accent-300"
                 >
                   Send another message
                 </button>
@@ -185,7 +185,7 @@ export default function Contact() {
                 </Field>
 
                 {status === 'error' && (
-                  <p className="flex items-center gap-2 text-sm text-rose-600">
+                  <p className="flex items-center gap-2 text-sm text-rose-400">
                     <AlertCircle size={16} /> Something went wrong. Please email me directly.
                   </p>
                 )}
@@ -193,7 +193,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={status === 'submitting'}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-indigo-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-indigo-700 disabled:opacity-60"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-accent-400 px-5 py-3 text-sm font-semibold text-[#0a0b0d] shadow-sm transition-colors hover:bg-accent-300 disabled:opacity-60"
                 >
                   {status === 'submitting' ? 'Sending…' : (
                     <>
@@ -211,7 +211,7 @@ export default function Contact() {
 }
 
 const inputClass =
-  'w-full rounded-lg border border-slate-300 bg-white px-3.5 py-2.5 text-sm text-slate-900 placeholder:text-slate-400 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20';
+  'w-full rounded-lg border border-white/10 bg-white/5 px-3.5 py-2.5 text-sm text-white placeholder:text-slate-500 focus:border-accent-500/50 focus:outline-none focus:ring-2 focus:ring-accent-500/20';
 
 function Field({
   label,
@@ -224,7 +224,7 @@ function Field({
 }) {
   return (
     <div>
-      <label htmlFor={htmlFor} className="mb-1.5 block text-sm font-medium text-slate-700">
+      <label htmlFor={htmlFor} className="mb-1.5 block text-sm font-medium text-slate-300">
         {label}
       </label>
       {children}

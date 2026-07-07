@@ -5,6 +5,15 @@
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-mono: ui-monospace, "SFMono-Regular", "Menlo", monospace;
+
+  /* Signature accent — electric lime (Robotflow-inspired). */
+  --color-accent-300: #d4f56a;
+  --color-accent-400: #bef264;
+  --color-accent-500: #a3e635;
+  --color-accent-600: #84cc16;
+
+  /* Dark surfaces. */
+  --color-base: #0a0b0d;
 }
 
 @layer base {
@@ -13,12 +22,18 @@
   }
 
   body {
-    @apply bg-white text-slate-800 font-sans antialiased;
-    /* Subtle top-of-page tint so the light theme doesn't feel flat. */
+    @apply bg-[#0a0b0d] text-slate-400 font-sans antialiased;
+    /* Subtle accent glow anchored top-right so the dark canvas has depth. */
     background-image:
-      radial-gradient(60rem 60rem at 100% -10%, rgba(79, 70, 229, 0.06), transparent 60%),
-      radial-gradient(50rem 50rem at -10% 0%, rgba(13, 148, 136, 0.05), transparent 55%);
+      radial-gradient(55rem 55rem at 100% -10%, rgba(190, 242, 100, 0.08), transparent 60%),
+      radial-gradient(45rem 45rem at -10% 10%, rgba(132, 204, 22, 0.05), transparent 55%);
     background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
+  ::selection {
+    background: rgba(190, 242, 100, 0.25);
+    color: #f8fafc;
   }
 }
 
