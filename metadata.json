@@ -1,0 +1,6 @@
+{
+  "name": "Web & Automation Consulting",
+  "description": "Consulting and development services to help small businesses setup websites, optimize basic CRMs, and automate lead follow-up.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
