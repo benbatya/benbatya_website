@@ -21,8 +21,17 @@
     scroll-behavior: smooth;
   }
 
+  /* Enlarge everything ~50% when the window is wider than it is tall
+     (landscape / desktop). Text sizing is rem-based, so scaling the root
+     font-size scales the whole layout proportionally. */
+  @media (orientation: landscape) {
+    html {
+      font-size: 150%;
+    }
+  }
+
   body {
-    @apply bg-[#0a0b0d] text-slate-400 font-sans antialiased;
+    @apply bg-[#0a0b0d] text-slate-300 font-sans antialiased;
     /* Subtle accent glow anchored top-right so the dark canvas has depth. */
     background-image:
       radial-gradient(55rem 55rem at 100% -10%, rgba(190, 242, 100, 0.08), transparent 60%),
