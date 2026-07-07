@@ -35,7 +35,13 @@ export default function Contact() {
           _captcha: 'false',
         }),
       });
-      if (!res.ok) throw new Error('Request failed');
+      // FormSubmit returns HTTP 200 even when it didn't actually send (e.g. the
+      // form still needs activation, or was spam-blocked), so trust the payload's
+      // `success` flag rather than res.ok alone. It comes back as "true"/"false".
+      const data = await res.json().catch(() => ({}) as {success?: unknown});
+      if (!res.ok || String((data as {success?: unknown}).success) !== 'true') {
+        throw new Error('Submission was not accepted');
+      }
       setStatus('success');
       setForm({name: '', email: '', company: '', message: ''});
     } catch {
