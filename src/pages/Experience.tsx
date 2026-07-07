@@ -10,7 +10,7 @@ export default function Experience() {
           Experience
         </p>
         <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">
-          20+ years of building demanding software
+          25 years of building impactful software
         </h1>
         <p className="mt-5 text-lg leading-relaxed text-slate-400">
           A seasoned senior software engineer specialized in the architecture and optimization of
@@ -31,26 +31,12 @@ export default function Experience() {
       <div className="mt-14">
         <ol className="relative border-l border-white/10">
           {roles.map((role) => (
-            <li key={`${role.company}-${role.start}`} className="mb-10 ml-6 last:mb-0">
+            <li key={role.company} className="mb-8 ml-6 last:mb-0">
               <span className="absolute -left-[7px] mt-1.5 h-3.5 w-3.5 rounded-full border-2 border-[#0a0b0d] bg-accent-400" />
-              <div className="flex flex-wrap items-baseline justify-between gap-x-3">
-                <h2 className="font-display text-xl font-semibold text-white">
-                  {role.company}
-                </h2>
-                <span className="text-sm text-slate-500 font-mono">
-                  {role.start} — {role.end}
-                </span>
-              </div>
-              <p className="mt-0.5 text-sm font-semibold text-accent-400">{role.title}</p>
-              <p className="mt-2 text-slate-400">{role.summary}</p>
-              <ul className="mt-3 space-y-1.5">
-                {role.highlights.map((h) => (
-                  <li key={h} className="flex gap-2 text-sm text-slate-400">
-                    <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-accent-500" />
-                    <span>{h}</span>
-                  </li>
-                ))}
-              </ul>
+              <h2 className="font-display text-xl font-semibold text-white">
+                {role.company}
+              </h2>
+              <p className="mt-1 text-slate-400">{role.summary}</p>
               {role.company === 'Meta Platforms' && (
                 <Link
                   to="/xr-simulator"
