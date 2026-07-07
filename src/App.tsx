@@ -3,6 +3,7 @@ import {Route, Routes, useLocation} from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import Experience from './pages/Experience';
+import CaseStudies from './pages/CaseStudies';
 import XrSimulator from './pages/XrSimulator';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
@@ -24,6 +25,7 @@ export default function App() {
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/experience" element={<Experience />} />
+          <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/xr-simulator" element={<XrSimulator />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />

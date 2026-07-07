@@ -4,7 +4,7 @@ import {ArrowRight, Clock, Layers, Users, Monitor} from 'lucide-react';
 const stats = [
   {icon: Clock, value: 'Up to 50%', label: 'Reduction in iteration time for headset projects'},
   {icon: Layers, value: '4 APIs', label: 'Unified rendering: Metal, Vulkan, DX11 & DX12'},
-  {icon: Users, value: '8+', label: 'Junior engineers mentored on the team'},
+  {icon: Users, value: '~9,000', label: 'Monthly active developers using the simulator'},
 ];
 
 const highlights = [
@@ -19,6 +19,10 @@ const highlights = [
   {
     title: 'Built for the inner loop',
     body: 'The simulator is optimized for fast startup and tight edit-run-inspect cycles. Shaving minutes off every iteration compounds across a team into a dramatically faster path from idea to working XR experience.',
+  },
+  {
+    title: 'Meets developers in their engine',
+    body: 'Beyond the core runtime, I built OpenXR integrations for Unity and Unreal and supported Godot and the Android Studio plugin, and I led a Spatial Simulator so Spatial SDK developers could iterate on Mixed Reality and multiplayer apps in the environment they already worked in.',
   },
 ];
 
@@ -36,7 +40,8 @@ export default function XrSimulator() {
           </h1>
           <p className="mt-5 max-w-2xl text-lg leading-relaxed text-slate-400">
             I led development of XrSim, the tool that lets developers run and debug extended-reality
-            apps directly on a desktop — no headset required — cutting XR iteration time by up to half.
+            apps directly on a desktop — no headset required — cutting XR iteration time by up to half
+            for a tool that grew to nearly 9,000 monthly active developers.
           </p>
           <div className="mt-6 flex flex-wrap gap-2">
             {['C++', 'OpenXR', 'Vulkan', 'Metal', 'DirectX 11/12'].map((t) => (
@@ -109,9 +114,9 @@ export default function XrSimulator() {
           <p className="mt-3 leading-relaxed text-slate-400">
             By moving the XR inner loop onto the desktop and unifying rendering across every major
             graphics API, XrSim made XR development feel like ordinary app development. Iteration
-            time for headset projects dropped by up to 50%, and I mentored a growing team of
-            engineers through the design and code reviews that kept the simulator dependable as it
-            scaled.
+            time for headset projects dropped by up to 50% for a tool that reached nearly 9,000
+            monthly active developers, and I mentored 8+ engineers through the design and code
+            reviews that kept the simulator dependable as it scaled.
           </p>
         </div>
       </section>
@@ -119,7 +124,7 @@ export default function XrSimulator() {
       {/* Next */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
         <div className="flex flex-wrap items-center justify-between gap-4 border-t border-white/10 pt-8">
-          <Link to="/experience" className="text-sm font-semibold text-slate-400 hover:text-white">
+          <Link to="/experience" className="text-sm font-semibold text-accent-600 hover:text-accent-400">
             ← Back to experience
           </Link>
           <Link

@@ -6,6 +6,7 @@ import {profile} from '../data/resume';
 const navLinks = [
   {to: '/', label: 'Home', end: true},
   {to: '/experience', label: 'Experience', end: false},
+  {to: '/case-studies', label: 'Case Studies', end: false},
   {to: '/xr-simulator', label: 'XR Simulator', end: false},
   {to: '/contact', label: 'Contact', end: false},
 ];
@@ -22,7 +23,7 @@ function NavItems({onNavigate}: {onNavigate?: () => void}) {
           className={({isActive}) =>
             [
               'text-sm font-medium transition-colors',
-              isActive ? 'text-accent-400' : 'text-slate-400 hover:text-white',
+              isActive ? 'text-accent-400' : 'text-accent-600 hover:text-accent-400',
             ].join(' ')
           }
         >
@@ -50,7 +51,7 @@ export default function Layout() {
               <span className="hidden sm:inline">{profile.name}</span>
             </Link>
 
-            <div className="hidden md:flex items-center gap-8">
+            <div className="hidden md:flex items-center gap-6">
               <NavItems />
               <Link
                 to="/contact"
@@ -95,7 +96,7 @@ export default function Layout() {
               <a
                 href={`mailto:${profile.email}`}
                 aria-label="Email"
-                className="text-slate-500 transition-colors hover:text-accent-400"
+                className="text-accent-600 transition-colors hover:text-accent-400"
               >
                 <Mail size={20} />
               </a>
@@ -104,7 +105,7 @@ export default function Layout() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="LinkedIn"
-                className="text-slate-500 transition-colors hover:text-accent-400"
+                className="text-accent-600 transition-colors hover:text-accent-400"
               >
                 <Linkedin size={20} />
               </a>
@@ -113,7 +114,7 @@ export default function Layout() {
                 target="_blank"
                 rel="noreferrer"
                 aria-label="GitHub"
-                className="text-slate-500 transition-colors hover:text-accent-400"
+                className="text-accent-600 transition-colors hover:text-accent-400"
               >
                 <Github size={20} />
               </a>
