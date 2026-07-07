@@ -24,8 +24,9 @@ export default function Home() {
               <span className="h-1.5 w-1.5 rounded-full bg-accent-400" /> Available for consulting
             </span>
             <h1 className="mt-6 font-display text-4xl font-bold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-              AI &amp; systems engineering,
-              <span className="text-accent-400"> shipped by hand.</span>
+              <span className="whitespace-nowrap">Custom AI engineering,</span>
+              <br />
+              <span className="text-accent-400">built to empower you.</span>
             </h1>
             <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-400">
               {profile.tagline}
@@ -47,13 +48,13 @@ export default function Home() {
               </a>
             </div>
             <div className="mt-8 flex items-center gap-5">
-              <a href={`mailto:${profile.email}`} aria-label="Email" className="text-slate-500 hover:text-accent-400">
+              <a href={`mailto:${profile.email}`} aria-label="Email" className="text-accent-600 hover:text-accent-400">
                 <Mail size={20} />
               </a>
-              <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-slate-500 hover:text-accent-400">
+              <a href={profile.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-accent-600 hover:text-accent-400">
                 <Linkedin size={20} />
               </a>
-              <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="text-slate-500 hover:text-accent-400">
+              <a href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub" className="text-accent-600 hover:text-accent-400">
                 <Github size={20} />
               </a>
             </div>
@@ -127,7 +128,7 @@ export default function Home() {
           </div>
           <Link
             to="/experience"
-            className="inline-flex items-center gap-1 text-sm font-semibold text-accent-400 hover:text-accent-300"
+            className="inline-flex items-center gap-1 text-sm font-semibold text-accent-600 hover:text-accent-400"
           >
             Full experience <ArrowRight size={15} />
           </Link>
@@ -160,7 +161,7 @@ export default function Home() {
                   ))}
                 </div>
                 {project.slug === 'xr-simulator' && (
-                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-accent-400">
+                  <span className="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-accent-600">
                     Read the case study <ArrowRight size={15} />
                   </span>
                 )}

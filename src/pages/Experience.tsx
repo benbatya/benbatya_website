@@ -54,7 +54,7 @@ export default function Experience() {
               {role.company === 'Meta Platforms' && (
                 <Link
                   to="/xr-simulator"
-                  className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-accent-400 hover:text-accent-300"
+                  className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-accent-600 hover:text-accent-400"
                 >
                   Read the XR Simulator case study <ArrowRight size={14} />
                 </Link>

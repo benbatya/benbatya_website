@@ -40,6 +40,13 @@
     background-attachment: fixed;
   }
 
+  /* Clickable text links idle at accent-600 so interactive elements read
+     distinctly from body content. Buttons/CTAs set their own text color via
+     utilities (higher specificity) and are intentionally unaffected. */
+  a {
+    color: var(--color-accent-600);
+  }
+
   ::selection {
     background: rgba(190, 242, 100, 0.25);
     color: #f8fafc;

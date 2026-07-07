@@ -90,10 +90,12 @@ export const roles: Role[] = [
     title: 'Senior Software Engineer',
     start: 'Feb 2021',
     end: 'Jan 2026',
-    summary: 'Led development of the Meta XR Simulator (XrSim), the flagship XR developer tool.',
+    summary: 'Led development of the Meta XR Simulator (XrSim) and Spatial Simulator — Meta\'s flagship XR developer tools.',
     highlights: [
-      'Led XR Simulator development, reducing iteration time for headset projects by up to 50%.',
-      'Architected integrated rendering capabilities across Metal, Vulkan, DX11, and DX12.',
+      'Led XR Simulator development, cutting iteration time for headset projects by up to 50% for nearly 9,000 monthly active developers.',
+      'Managed Spatial Simulator development, giving Spatial SDK developers a robust platform to iterate on Mixed Reality and multiplayer apps.',
+      'Orchestrated cross-functional collaboration across Developer Technology, Spatial SDK, Android Studio Plugin, Horizon OS Emulator, and HzOS Security & Privacy teams.',
+      'Architected integrated rendering across Metal, Vulkan, DX11, and DX12, and built OpenXR integrations for Unity, Unreal, Godot, and Android Studio.',
       'Mentored 8+ junior engineers through design and code reviews.',
     ],
   },
@@ -102,9 +104,10 @@ export const roles: Role[] = [
     title: 'Senior Software Engineer',
     start: 'Jun 2020',
     end: 'Nov 2020',
-    summary: 'Built an in-browser video editor powered by WebAssembly.',
+    summary: 'Built an in-browser multi-person video editor powered by WebAssembly.',
     highlights: [
-      'Developed an in-browser video editor using WebAssembly.',
+      'Developed an in-browser multi-person video editor in C++ and TypeScript, compiled to WebAssembly.',
+      'Implemented frame-accurate playback and scrubbing infrastructure.',
       'Improved clip load times by 50% by prefetching and caching frames.',
     ],
   },
@@ -115,7 +118,9 @@ export const roles: Role[] = [
     end: 'Jan 2020',
     summary: 'Medical visualization and precision motion for a therapeutic catheter system.',
     highlights: [
+      'Improved real-time rendering of an ultrasonic catheter and its ring sensors within the heart.',
       'Enhanced position accuracy using the Biarc algorithm to achieve 1mm precision.',
+      'Developed real-time surgical UI components with VTK and QML.',
     ],
   },
   {
@@ -126,6 +131,8 @@ export const roles: Role[] = [
     summary: 'Additive manufacturing pre-print software for metal 3D printing.',
     highlights: [
       'Engineered a pre-print system featuring CAD import, part placement, and support generation.',
+      'Designed a hierarchical spreadsheet for developing additive manufacturing processes.',
+      'Supported development of the final Inconel, stainless steel, and titanium printing processes.',
     ],
   },
   {
@@ -135,7 +142,9 @@ export const roles: Role[] = [
     end: 'Dec 2009',
     summary: 'Game development tooling and iteration-time improvements.',
     highlights: [
+      'Developed tools and workflows for Star Wars: The Force Unleashed I & II, optimizing console-specific pipelines.',
       'Improved iterative desktop→console test time from minutes to seconds.',
+      'Built level-design and remoting tools, and generated schemas from C++ classes to accelerate gameplay systems.',
     ],
   },
 ];
@@ -155,7 +164,7 @@ export const projects: Project[] = [
     period: '2021 – 2026',
     tagline: 'Run and debug XR apps on a desktop — no headset required.',
     blurb:
-      'Led development of XrSim, a runtime that emulates Meta headsets on desktop so developers can iterate on XR apps without donning hardware — cutting iteration time by up to 50% and unifying rendering across Metal, Vulkan, DX11, and DX12.',
+      'Led development of XrSim, a runtime that emulates Meta headsets on desktop so developers can iterate on XR apps without donning hardware — cutting iteration time by up to 50% for nearly 9,000 monthly active developers and unifying rendering across Metal, Vulkan, DX11, and DX12.',
     tech: ['C++', 'Vulkan', 'Metal', 'DirectX', 'OpenXR'],
   },
   {

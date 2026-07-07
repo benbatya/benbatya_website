@@ -68,7 +68,7 @@ export default function Contact() {
           <div className="mt-8 space-y-4">
             <a
               href={`mailto:${profile.email}`}
-              className="flex items-center gap-3 text-slate-400 transition-colors hover:text-accent-400"
+              className="flex items-center gap-3 text-accent-600 transition-colors hover:text-accent-400"
             >
               <span className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-white/5">
                 <Mail size={18} />
@@ -79,7 +79,7 @@ export default function Contact() {
               href={profile.linkedin}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-3 text-slate-400 transition-colors hover:text-accent-400"
+              className="flex items-center gap-3 text-accent-600 transition-colors hover:text-accent-400"
             >
               <span className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-white/5">
                 <Linkedin size={18} />
@@ -90,7 +90,7 @@ export default function Contact() {
               href={profile.github}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-3 text-slate-400 transition-colors hover:text-accent-400"
+              className="flex items-center gap-3 text-accent-600 transition-colors hover:text-accent-400"
             >
               <span className="grid h-10 w-10 place-items-center rounded-lg border border-white/10 bg-white/5">
                 <Github size={18} />
@@ -123,7 +123,7 @@ export default function Contact() {
                 <button
                   type="button"
                   onClick={() => setStatus('idle')}
-                  className="mt-6 text-sm font-semibold text-accent-400 hover:text-accent-300"
+                  className="mt-6 text-sm font-semibold text-accent-600 hover:text-accent-400"
                 >
                   Send another message
                 </button>
