@@ -9,8 +9,9 @@ triggers the GitHub Actions workflow that publishes to https://benbatya.com.
 
 For all changes:
 
-1. **Create a branch** off `main` before making any edits
-   (e.g. `git checkout -b <short-descriptive-name>`).
+1. **Ensure commits land on a branch, not `main`.** Before committing, check the current
+   branch with `git branch --show-current`; if it returns `main`, create a branch off it
+   first (`git checkout -b <short-descriptive-name>`) so the commit is made there.
 2. **Commit** the work on that branch.
 3. **Push the branch upstream** (`git push -u origin HEAD`).
 4. **Open a pull request** into `main` (`gh pr create --base main`).
