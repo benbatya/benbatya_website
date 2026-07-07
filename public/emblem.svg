@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 600 600"
+   width="100%"
+   height="100%"
+   version="1.1"
+   id="svg32"
+   sodipodi:docname="emblem.svg"
+   inkscape:version="1.4.3 (0d15f75042, 2025-12-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview32"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="2.2061732"
+     inkscape:cx="256.09957"
+     inkscape:cy="274.23051"
+     inkscape:window-width="1920"
+     inkscape:window-height="1144"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g19"
+     showgrid="true">
+    <inkscape:grid
+       id="grid4"
+       units="px"
+       originx="0"
+       originy="0"
+       spacingx="1"
+       spacingy="1"
+       empcolor="#0099e5"
+       empopacity="0.30196078"
+       color="#0099e5"
+       opacity="0.14901961"
+       empspacing="5"
+       enabled="true"
+       visible="true" />
+  </sodipodi:namedview>
+  <defs
+     id="defs15">
+    <linearGradient
+       id="plan-grad"
+       x1="0%"
+       y1="100%"
+       x2="100%"
+       y2="0%">
+      <stop
+         offset="0%"
+         stop-color="#3B82F6"
+         id="stop1" />
+      <stop
+         offset="100%"
+         stop-color="#60A5FA"
+         id="stop2" />
+    </linearGradient>
+    <linearGradient
+       id="effort-grad"
+       x1="0%"
+       y1="100%"
+       x2="100%"
+       y2="0%">
+      <stop
+         offset="0%"
+         stop-color="#F59E0B"
+         id="stop3" />
+      <stop
+         offset="100%"
+         stop-color="#FBBF24"
+         id="stop4" />
+    </linearGradient>
+    <linearGradient
+       id="success-grad"
+       x1="0%"
+       y1="100%"
+       x2="100%"
+       y2="0%">
+      <stop
+         offset="0%"
+         stop-color="#10B981"
+         id="stop5" />
+      <stop
+         offset="100%"
+         stop-color="#34D399"
+         id="stop6" />
+    </linearGradient>
+    <linearGradient
+       id="earnings-grad"
+       x1="0%"
+       y1="100%"
+       x2="100%"
+       y2="0%">
+      <stop
+         offset="0%"
+         stop-color="#8B5CF6"
+         id="stop7" />
+      <stop
+         offset="100%"
+         stop-color="#A78BFA"
+         id="stop8" />
+    </linearGradient>
+    <marker
+       id="arrow"
+       viewBox="0 0 10 10"
+       refX="6"
+       refY="5"
+       markerWidth="6"
+       markerHeight="6"
+       orient="auto-start-reverse">
+      <path
+         d="M 0 1.5 L 8 5 L 0 8.5 z"
+         fill="#4B5563"
+         id="path8" />
+    </marker>
+    <marker
+       id="gear-arrow"
+       viewBox="0 0 10 10"
+       refX="3.9484036"
+       refY="4.776751"
+       markerWidth="5"
+       markerHeight="5"
+       orient="auto-start-reverse"
+       preserveAspectRatio="xMidYMid">
+      <path
+         d="M 0,2 7,5 0,8 Z"
+         fill="#fbbf24"
+         id="path9" />
+    </marker>
+    <g
+       id="long-tooth-gear">
+      <circle
+         cx="0"
+         cy="0"
+         r="11"
+         fill="url(#effort-grad)"
+         id="circle9" />
+      <path
+         d="M -3 -24 H 3 L 4.5 -10 H -4.5 Z"
+         fill="url(#effort-grad)"
+         id="path10" />
+      <path
+         d="M -3 -24 H 3 L 4.5 -10 H -4.5 Z"
+         fill="url(#effort-grad)"
+         transform="rotate(60)"
+         id="path11" />
+      <path
+         d="M -3 -24 H 3 L 4.5 -10 H -4.5 Z"
+         fill="url(#effort-grad)"
+         transform="rotate(120)"
+         id="path12" />
+      <path
+         d="M -3 -24 H 3 L 4.5 -10 H -4.5 Z"
+         fill="url(#effort-grad)"
+         transform="rotate(180)"
+         id="path13" />
+      <path
+         d="M -3 -24 H 3 L 4.5 -10 H -4.5 Z"
+         fill="url(#effort-grad)"
+         transform="rotate(240)"
+         id="path14" />
+      <path
+         d="M -3 -24 H 3 L 4.5 -10 H -4.5 Z"
+         fill="url(#effort-grad)"
+         transform="rotate(300)"
+         id="path15" />
+      <circle
+         cx="0"
+         cy="0"
+         r="3"
+         fill="#161B22"
+         id="circle15" />
+    </g>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#effort-grad"
+       id="linearGradient32"
+       x1="-4.8280779"
+       y1="20.187292"
+       x2="17.425189"
+       y2="-2.0659747"
+       gradientTransform="matrix(0.94133634,0.4253809,0.39864648,-0.88217508,2.1249728,-1.7918688)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#effort-grad"
+       id="linearGradient33"
+       x1="-10.43948"
+       y1="-27.533698"
+       x2="8.1444586"
+       y2="-46.117637"
+       gradientTransform="matrix(1.2950658,1.1742689,-0.38423735,0.42376382,0.60578523,1.3381951)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#plan-grad"
+       id="linearGradient7"
+       x1="-50.144735"
+       y1="56.236988"
+       x2="50.144735"
+       y2="-44.052482"
+       gradientTransform="scale(0.93728684,1.0669092)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#plan-grad"
+       id="linearGradient8"
+       x1="-13"
+       y1="5"
+       x2="-7"
+       y2="-1"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#plan-grad"
+       id="linearGradient9"
+       x1="-3"
+       y1="5"
+       x2="3"
+       y2="-1"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#plan-grad"
+       id="linearGradient10"
+       x1="7"
+       y1="5"
+       x2="13"
+       y2="-1"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#success-grad"
+       id="linearGradient11"
+       x1="-47"
+       y1="47"
+       x2="47"
+       y2="-47"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#success-grad"
+       id="linearGradient12"
+       x1="-34.418382"
+       y1="32.359162"
+       x2="-3.8242646"
+       y2="1.7650452"
+       gradientTransform="scale(1.1766968,0.84983659)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#success-grad"
+       id="linearGradient13"
+       x1="3.8242646"
+       y1="32.359162"
+       x2="34.418382"
+       y2="1.7650452"
+       gradientTransform="scale(1.1766968,0.84983659)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#success-grad"
+       id="linearGradient14"
+       x1="-13.200379"
+       y1="18.673707"
+       x2="13.200379"
+       y2="-7.727051"
+       gradientTransform="scale(1.2878418,0.77649287)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#success-grad"
+       id="linearGradient15"
+       x1="2.1351046"
+       y1="-1.7563542"
+       x2="16.653816"
+       y2="-16.275066"
+       gradientTransform="scale(1.1709028,0.85404184)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#success-grad"
+       id="linearGradient16"
+       x1="-28.95413"
+       y1="38.466015"
+       x2="28.95413"
+       y2="-19.442244"
+       gradientTransform="scale(1.3987642,0.71491679)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#success-grad"
+       id="linearGradient17"
+       x1="-28.95413"
+       y1="38.466015"
+       x2="28.95413"
+       y2="-19.442244"
+       gradientTransform="scale(1.3987642,0.71491679)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#earnings-grad"
+       id="linearGradient18"
+       x1="-47"
+       y1="47"
+       x2="47"
+       y2="-47"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#earnings-grad"
+       id="linearGradient19"
+       x1="-18.841583"
+       y1="18.362902"
+       x2="18.841583"
+       y2="-19.320264"
+       gradientTransform="scale(0.79611145,1.2561055)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#earnings-grad"
+       id="linearGradient20"
+       x1="-9.3273791"
+       y1="9.3273791"
+       x2="9.3273791"
+       y2="-9.3273791"
+       gradientTransform="scale(0.32163376,3.1091264)"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#effort-grad"
+       id="linearGradient21"
+       x1="-47"
+       y1="47"
+       x2="47"
+       y2="-47"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <rect
+     width="600"
+     height="600"
+     rx="32"
+     fill="#0D1117"
+     id="rect15" />
+  <g
+     fill="none"
+     stroke="#4b5563"
+     stroke-width="4"
+     stroke-dasharray="8, 8"
+     marker-end="url(#arrow)"
+     id="g19"
+     transform="matrix(0.68290759,0,0,0.68290759,95.12621,95.12621)">
+    <path
+       d="m 369.588,139.66385 q 91.77115,0 91.77115,88.68492"
+       id="path16"
+       style="stroke-width:3.28054" />
+    <path
+       d="m 460.32092,368.63635 q 0,92.67427 -88.65531,92.67427"
+       id="path17"
+       style="stroke-width:3.29609" />
+    <path
+       d="m 231.36365,460.32092 q -92.67427,0 -92.67427,-88.65531"
+       id="path18"
+       style="stroke-width:3.29609" />
+    <path
+       d="m 139.65749,231.77623 q 0,-93.13906 88.65232,-93.13906"
+       id="path19"
+       style="stroke-width:3.30429" />
+  </g>
+  <g
+     transform="translate(300,186.68717)"
+     id="g23">
+    <path
+       d="m -45,-25 a 20,20 0 0 1 20,-20 h 50 a 20,20 0 0 1 20,20 V 25 A 20,20 0 0 1 25,45 H 10 L 25,58 V 45 H -25 A 20,20 0 0 1 -45,25 Z"
+       fill="#161b22"
+       stroke="url(#plan-grad)"
+       stroke-width="4"
+       stroke-linejoin="round"
+       id="path20"
+       style="stroke:url(#linearGradient7)" />
+    <circle
+       cx="-10"
+       cy="2"
+       r="3"
+       fill="url(#plan-grad)"
+       id="circle21"
+       style="fill:url(#linearGradient8)" />
+    <circle
+       cx="0"
+       cy="2"
+       r="3"
+       fill="url(#plan-grad)"
+       id="circle22"
+       style="fill:url(#linearGradient9)" />
+    <circle
+       cx="10"
+       cy="2"
+       r="3"
+       fill="url(#plan-grad)"
+       id="circle23"
+       style="fill:url(#linearGradient10)" />
+  </g>
+  <g
+     transform="translate(412.40628,300)"
+     id="g26">
+    <circle
+       cx="0"
+       cy="0"
+       r="45"
+       fill="#161b22"
+       stroke="url(#effort-grad)"
+       stroke-width="4"
+       id="circle24"
+       style="stroke:url(#linearGradient21)" />
+    <g
+       transform="translate(-10,-10)"
+       id="g24">
+      <path
+         d="M -0.5688985,-22.674721 A 24,24 0 0 1 22.860682,-6.8300115"
+         fill="none"
+         stroke="url(#effort-grad)"
+         stroke-width="2.5"
+         stroke-linecap="round"
+         marker-end="url(#gear-arrow)"
+         id="path24"
+         style="stroke:url(#linearGradient33);stroke-dasharray:2.5, 5;stroke-dashoffset:0"
+         inkscape:transform-center-x="-9.5001633"
+         inkscape:transform-center-y="-15.789476" />
+      <use
+         href="#long-tooth-gear"
+         transform="matrix(0.75946859,0.30920456,-0.30920456,0.75946859,1.4731391,1.2465023)"
+         id="use24" />
+    </g>
+    <g
+       transform="translate(12,12)"
+       id="g25">
+      <path
+         d="M 17.204862,6.1199535 A 18,18 0 0 0 5.9798941,-17.60767"
+         fill="none"
+         stroke="url(#effort-grad)"
+         stroke-width="2"
+         stroke-linecap="round"
+         marker-end="url(#gear-arrow)"
+         id="path25"
+         style="stroke:url(#linearGradient32);stroke-dasharray:2, 4;stroke-dashoffset:0"
+         inkscape:transform-center-x="-12.590092"
+         inkscape:transform-center-y="-5.3775223" />
+      <use
+         href="#long-tooth-gear"
+         transform="matrix(0.52425731,0.36708892,-0.36708892,0.52425731,0,0)"
+         id="use25" />
+    </g>
+  </g>
+  <g
+     transform="translate(300,412.85955)"
+     id="g31">
+    <circle
+       cx="0"
+       cy="0"
+       r="45"
+       fill="#161b22"
+       stroke="url(#success-grad)"
+       stroke-width="4"
+       id="circle26"
+       style="stroke:url(#linearGradient11)" />
+    <g
+       fill="url(#success-grad)"
+       stroke="url(#success-grad)"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="g30"
+       style="fill:url(#linearGradient16);stroke:url(#linearGradient17)">
+      <!-- forearms angling up to the clasp -->
+      <path
+         d="M -34,21 -11,8"
+         fill="none"
+         stroke-width="13"
+         id="path26"
+         style="stroke:url(#linearGradient12)" />
+      <path
+         d="M 34,21 11,8"
+         fill="none"
+         stroke-width="13"
+         id="path27"
+         style="stroke:url(#linearGradient13)" />
+      <!-- clasp body: two hands meeting -->
+      <path
+         d="m -17,11 9,-14 q 8,-6 16,0 l 9,14 q -17,7 -34,0 z"
+         stroke="none"
+         id="path28"
+         style="fill:url(#linearGradient14)" />
+      <!-- front hand fingers wrapping over the grip -->
+      <path
+         d="M -10,-1 V 11 M -3,-4 V 12 M 4,-4 v 16 m 7,-13 v 12"
+         fill="none"
+         stroke="#161b22"
+         stroke-width="2.6"
+         id="path29" />
+      <!-- thumb of the front hand, curling over the top -->
+      <path
+         d="m 6,-5 q 6,-7 10,-5"
+         fill="none"
+         stroke-width="7"
+         id="path30"
+         style="stroke:url(#linearGradient15)" />
+    </g>
+  </g>
+  <g
+     transform="matrix(-1,0,0,1,186.68718,300)"
+     id="g32">
+    <circle
+       cx="0"
+       cy="0"
+       r="45"
+       fill="#161b22"
+       stroke="url(#earnings-grad)"
+       stroke-width="4"
+       id="circle31"
+       style="stroke:url(#linearGradient18)" />
+    <path
+       d="m -12,-14 c 0,-10 24,-10 24,2 0,10 -24,10 -24,22 0,12 24,14 24,2"
+       fill="none"
+       stroke="url(#earnings-grad)"
+       stroke-width="6"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       id="path31"
+       style="stroke:url(#linearGradient19)" />
+    <line
+       x1="0"
+       y1="-26"
+       x2="0"
+       y2="26"
+       stroke="url(#earnings-grad)"
+       stroke-width="6"
+       stroke-linecap="round"
+       id="line31"
+       style="stroke:url(#linearGradient20)" />
+  </g>
+</svg>
