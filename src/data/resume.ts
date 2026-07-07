@@ -31,9 +31,8 @@ export const profile = {
   email: 'benjaminbatya@gmail.com',
   linkedin: 'https://www.linkedin.com/in/benjaminbatya/',
   github: 'https://github.com/benbatya',
-  resumeUrl: '/resume.pdf', // TODO: drop your résumé PDF at public/resume.pdf
-  // Placeholder avatar; replace with a real photo (add public/headshot.jpg and set '/headshot.jpg').
-  headshotUrl: '/headshot.svg',
+  resumeUrl: '/Ben_Batya_Resume.pdf',
+  headshotUrl: '/head_shot.jpg',
 };
 
 export const skills: { group: string; items: string[] }[] = [
