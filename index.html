@@ -3,11 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Design & Lead Automation Consulting | Small Business CRM Systems</title>
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>Benjamin Batya — AI & Systems Engineering Consultant</title>
+    <meta
+      name="description"
+      content="Benjamin Batya is a senior software engineer and consultant with 20+ years across AI development, high-performance systems, and extended reality (XR)."
+    />
+    <meta name="author" content="Benjamin Batya" />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Benjamin Batya — AI & Systems Engineering Consultant" />
+    <meta
+      property="og:description"
+      content="Senior software engineer and consultant. AI development, high-performance systems, and XR — 20+ years shipping demanding software."
+    />
+    <meta property="og:url" content="https://benbatya.com/" />
+    <meta name="twitter:card" content="summary" />
+
+    <!--
+      SPA redirect for GitHub Pages: a deep-link request (e.g. /experience) 404s on
+      Pages, which serves 404.html. That file redirects here with the original path
+      encoded in the query string; this snippet restores it before React mounts.
+      https://github.com/rafgraph/spa-github-pages
+    -->
+    <script>
+      (function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&');
+            })
+            .join('?');
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash);
+        }
+      })(window.location);
+    </script>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="src/main.tsx"></script>
+    <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
