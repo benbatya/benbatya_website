@@ -170,24 +170,29 @@ export default function XrSimulator() {
           <h2 className="font-display text-2xl font-bold text-white">Spatial Simulator</h2>
           <p className="mt-3 leading-relaxed text-slate-400">
             Spatial apps are Android apps, and the Android application lifecycle is far too complex to
-            emulate faithfully on a normal desktop OS. To be useful, the tool had to let developers
-            iterate on their work as real Android applications — honoring lifecycle events rather than
-            ignoring them — which meant it needed to be a full Android system image running inside a
-            virtual-machine container.
+            emulate faithfully on a desktop OS. To be useful, the tool had to let developers test
+            their products as real Android applications — honoring lifecycle events rather than
+            ignoring them — which meant the simulation needed to be a full Android system image
+            running inside a virtual-machine container.
           </p>
           <p className="mt-3 leading-relaxed text-slate-400">
-            I led the Spatial Simulator to solve exactly that. Running the real Android system image
-            in a QEMU virtual-machine container — at native speed — let developers push, run, and
-            debug their apps on the Simulator straight from Android Studio, exactly as if they were
-            deploying to a connected headset, but with no headset required. It brought the same
-            desktop-first iteration loop to Spatial SDK and Platform SDK applications, at the API
+            I led the Spatial Simulator project to solve exactly that. Running a full Android system
+            image inside a QEMU virtual-machine container — at native speed — let developers push,
+            run, and debug their apps on the Simulator straight from Android Studio, exactly as if
+            they were deploying to a connected headset, but with no headset required. It brought the
+            same desktop-first iteration loop to Spatial SDK and Platform SDK applications, at the API
             layer.
           </p>
           <p className="mt-3 leading-relaxed text-slate-400">
             It reused the tooling and concepts proven in the XR Simulator, extending that workflow up
-            the stack to the full Spatial and Platform SDK surface. A highly stripped-down version —
-            without Spatial SDK API support — was later released publicly as part of Meta's Horizon
-            developer tooling.
+            the stack to the full Spatial and Platform SDK surface. The same input simulation,
+            forwarding, synthetic environments, and performance optimizations that worked in the XR
+            Simulator worked in the Spatial Simulator too.
+          </p>
+          <p className="mt-3 leading-relaxed text-slate-400">
+            A highly stripped-down version was later released publicly as part of Meta's Horizon
+            developer tooling. It had all of the Android-system tweaks required to run inside QEMU,
+            but without the Spatial SDK API support.
           </p>
           <div className="mt-5 flex flex-wrap gap-2">
             {['Android system image', 'QEMU', 'Spatial SDK', 'Platform SDK'].map((t) => (
