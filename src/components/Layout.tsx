@@ -8,7 +8,6 @@ const navLinks = [
   {to: '/experience', label: 'Experience', end: false},
   {to: '/case-studies', label: 'Case Studies', end: false},
   {to: '/simulators', label: 'Simulators', end: false},
-  {to: '/contact', label: 'Contact', end: false},
 ];
 
 function NavItems({onNavigate}: {onNavigate?: () => void}) {
@@ -76,6 +75,13 @@ export default function Layout() {
           <div className="md:hidden border-t border-white/10 bg-[#0a0b0d] px-4 py-4">
             <div className="flex flex-col gap-4">
               <NavItems onNavigate={() => setMobileOpen(false)} />
+              <Link
+                to="/contact"
+                onClick={() => setMobileOpen(false)}
+                className="rounded-lg bg-accent-400 px-4 py-2 text-center text-sm font-semibold text-[#0a0b0d] shadow-sm transition-colors hover:bg-accent-300"
+              >
+                Get in touch
+              </Link>
             </div>
           </div>
         )}
