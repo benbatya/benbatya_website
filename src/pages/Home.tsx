@@ -168,7 +168,7 @@ export default function Home() {
               </div>
             );
             return project.slug === 'xr-simulator' ? (
-              <Link key={project.slug} to="/xr-simulator" className="block">
+              <Link key={project.slug} to="/simulators" className="block">
                 {card}
               </Link>
             ) : (

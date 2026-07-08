@@ -7,7 +7,7 @@ const navLinks = [
   {to: '/', label: 'Home', end: true},
   {to: '/experience', label: 'Experience', end: false},
   {to: '/case-studies', label: 'Case Studies', end: false},
-  {to: '/xr-simulator', label: 'XR Simulator', end: false},
+  {to: '/simulators', label: 'Simulators', end: false},
   {to: '/contact', label: 'Contact', end: false},
 ];
 

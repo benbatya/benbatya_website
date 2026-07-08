@@ -39,7 +39,7 @@ export default function Experience() {
               <p className="mt-1 text-slate-400">{role.summary}</p>
               {role.company === 'Meta Platforms' && (
                 <Link
-                  to="/xr-simulator"
+                  to="/simulators"
                   className="mt-3 inline-flex items-center gap-1 text-sm font-semibold text-accent-600 hover:text-accent-400"
                 >
                   Read the XR Simulator case study <ArrowRight size={14} />
