@@ -43,10 +43,10 @@ export default function About() {
               games. The common thread is a love of problems most people consider too gnarly to touch.
             </p>
             <p>
-              But the work has never really been about the technology for me &mdash; it&rsquo;s about
-              the people it&rsquo;s for. The engagements I&rsquo;m proudest of are the ones where a
-              team felt genuinely supported: where the hard thing got simpler, the roadmap got
-              clearer, and working together was actually enjoyable.
+              What I love most is delivering something a client finds genuinely satisfying. I&rsquo;m
+              at my proudest when someone takes one of my tools and creates something with it that I
+              never could have imagined &mdash; and I&rsquo;m thrilled every time collaboration gets
+              easier and the hard, tangled problems become simpler and more understandable.
             </p>
           </div>
         </div>
