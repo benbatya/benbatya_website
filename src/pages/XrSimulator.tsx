@@ -7,16 +7,9 @@ const stats = [
   {icon: Users, value: '~9,000', label: 'Monthly active developers using the simulator'},
 ];
 
-interface Room {
-  name: string;
-  /** Optional thumbnail; falls back to a placeholder tile when absent. */
-  image?: string;
-}
-
 interface Highlight {
   title: string;
   body: string;
-  rooms?: Room[];
 }
 
 const highlights: Highlight[] = [
@@ -42,12 +35,7 @@ const highlights: Highlight[] = [
   },
   {
     title: 'Synthetic environments to test against',
-    body: 'The Synthetic Environment Server let developers test their extended-reality apps across a variety of simulated rooms — serving passthrough, scene geometry, spatial anchors, and depth from a virtual space. Three hero rooms covered the everyday layouts developers designed for.',
-    rooms: [
-      {name: 'Living Room', image: '/simulators/ses-living-room.jpg'},
-      {name: 'Office / Bedroom', image: '/simulators/ses-bedroom.jpg'},
-      {name: 'Game Room', image: '/simulators/ses-game-room.jpg'},
-    ],
+    body: 'The Synthetic Environment Server let developers test their extended-reality apps across a variety of simulated rooms — serving passthrough, scene geometry, spatial anchors, and depth from a virtual space. Hero rooms like a living room, an office/bedroom, and a game room covered the everyday layouts developers designed for.',
   },
 ];
 
@@ -169,30 +157,6 @@ export default function XrSimulator() {
                 <div className="min-w-0">
                   <h3 className="font-display text-lg font-semibold text-white">{h.title}</h3>
                   <p className="mt-2 leading-relaxed text-slate-400">{h.body}</p>
-                  {h.rooms && (
-                    <div className="mt-4 grid max-w-md grid-cols-3 gap-3">
-                      {h.rooms.map((room) => (
-                        <figure
-                          key={room.name}
-                          className="overflow-hidden rounded-lg border border-white/10"
-                        >
-                          {room.image ? (
-                            <img
-                              src={room.image}
-                              alt={`${room.name} synthetic environment`}
-                              loading="lazy"
-                              className="aspect-square w-full object-cover"
-                            />
-                          ) : (
-                            <div className="aspect-square w-full bg-gradient-to-br from-accent-500/20 to-emerald-500/5" />
-                          )}
-                          <figcaption className="px-2 py-1.5 text-center text-xs font-medium text-slate-300">
-                            {room.name}
-                          </figcaption>
-                        </figure>
-                      ))}
-                    </div>
-                  )}
                 </div>
               </li>
             ))}

@@ -43,9 +43,9 @@ reworked in this branch:
 - Added a "Spatial Simulator" section (problem + QEMU/Android-system-image
   design + Android Studio push/debug + public-release link).
 - Added "What I built" items: Input Forwarding (#5) and Synthetic Environment
-  Server (#6) with three hero-room thumbnails (`public/simulators/ses-*.jpg`,
-  resized from downloaded PNGs). NOTE: room images appear to be Meta's — publish
-  at the owner's discretion.
+  Server (#6). SES is a text-only bullet — the hero-room screenshots were
+  intentionally omitted (they appear to be Meta's assets), with the room names
+  folded into the prose instead.
 - Reordered Impact above "What I built"; wrapped "The problem" and "What I built"
   in bordered cards; converted the "What I built" numbered list to bullets;
   added Monitor/HandFist/Hammer icon badges; aligned the Impact paragraph with
