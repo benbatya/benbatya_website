@@ -10,7 +10,7 @@ export default function Experience() {
           Experience
         </p>
         <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-white sm:text-5xl">
-          25 years of building impactful software
+          20+ years of building impactful software
         </h1>
         <p className="mt-5 text-lg leading-relaxed text-slate-400">
           A seasoned senior software engineer specialized in the architecture and optimization of
