@@ -23,6 +23,9 @@ For all changes:
    what was intended). Then update the PR summary to summarize the change and reference
    the plan file, so every merged PR points back to its plan.
 7. Merge to `main` **only** via that PR — which is what deploys the site.
+8. **Clean up after merging.** Once the PR is merged, stop any demo/dev server
+   processes started during the work (e.g. the Vite dev server on port 5173/5174) so
+   they don't keep consuming compute resources.
 
 Do not push to `main` or fast-forward `main` locally to sneak changes in. If you find
 yourself on `main` with uncommitted work, create a branch first and move the work there.
