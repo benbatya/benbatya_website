@@ -44,7 +44,7 @@ export default function Home() {
                 rel="noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-slate-200 transition-colors hover:border-white/25 hover:bg-white/10"
               >
-                <Download size={16} /> Download résumé
+                <Download size={16} /> View Resume
               </a>
             </div>
             <div className="mt-8 flex items-center gap-5">
@@ -85,10 +85,12 @@ export default function Home() {
               What I do
             </p>
             <h2 className="mt-3 font-display text-3xl font-bold text-white sm:text-4xl">
-              Consulting across the AI–systems boundary
+              Specialist engagements across the AI–systems boundary
             </h2>
             <p className="mt-4 text-slate-400">
-              Two decades of shipping demanding software — brought to bear on your hardest engineering problems.
+              I partner with deep-tech, hardware, and medical teams on the problems that are
+              too specialized to hire for — 20+ years of shipping demanding software, brought
+              to bear on your hardest engineering challenges.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -112,6 +114,26 @@ export default function Home() {
               );
             })}
           </div>
+        </div>
+      </section>
+
+      {/* About teaser */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="rounded-3xl border border-white/10 bg-white/[0.03] px-8 py-12 sm:px-12">
+          <p className="text-xs font-semibold uppercase tracking-wider text-accent-400 font-mono">
+            Who I am
+          </p>
+          <p className="mt-4 max-w-3xl font-display text-2xl font-medium leading-snug text-white sm:text-3xl">
+            More than twenty years of hard engineering &mdash; but the work has never really been
+            about the technology. It&rsquo;s about the people it&rsquo;s for, and making the team
+            behind it feel genuinely supported.
+          </p>
+          <Link
+            to="/about"
+            className="mt-6 inline-flex items-center gap-1 text-sm font-semibold text-accent-600 hover:text-accent-400"
+          >
+            More about me <ArrowRight size={15} />
+          </Link>
         </div>
       </section>
 
