@@ -26,7 +26,7 @@ export default function App() {
           <Route path="/" element={<Home />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/case-studies" element={<CaseStudies />} />
-          <Route path="/xr-simulator" element={<XrSimulator />} />
+          <Route path="/simulators" element={<XrSimulator />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Route>
