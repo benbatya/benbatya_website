@@ -5,6 +5,7 @@ import {profile} from '../data/resume';
 
 const navLinks = [
   {to: '/', label: 'Home', end: true},
+  {to: '/about', label: 'About', end: false},
   {to: '/experience', label: 'Experience', end: false},
   {to: '/case-studies', label: 'Case Studies', end: false},
   {to: '/simulators', label: 'Simulators', end: false},

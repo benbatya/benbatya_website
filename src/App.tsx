@@ -2,6 +2,7 @@ import {useEffect} from 'react';
 import {Route, Routes, useLocation} from 'react-router-dom';
 import Layout from './components/Layout';
 import Home from './pages/Home';
+import About from './pages/About';
 import Experience from './pages/Experience';
 import CaseStudies from './pages/CaseStudies';
 import XrSimulator from './pages/XrSimulator';
@@ -24,6 +25,7 @@ export default function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/case-studies" element={<CaseStudies />} />
           <Route path="/simulators" element={<XrSimulator />} />

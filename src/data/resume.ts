@@ -54,17 +54,17 @@ export const services: { title: string; description: string }[] = [
   {
     title: 'AI-Assisted Engineering & Tooling',
     description:
-      'Design and stand up AI development workflows, evaluation harnesses, and test infrastructure that cut iteration and review time dramatically.',
+      'Stand up AI development workflows, evaluation harnesses, and test infrastructure for engineering teams — cutting iteration and review time on complex codebases where off-the-shelf tooling falls short.',
   },
   {
     title: 'High-Performance Systems',
     description:
-      'Architect and optimize latency- and throughput-critical software in C/C++ and Rust across desktop, mobile, and embedded targets.',
+      'Architect and optimize latency- and throughput-critical software in C/C++ and Rust across desktop, mobile, and embedded targets — the deep-systems work most teams can\'t staff in-house.',
   },
   {
     title: 'Graphics, XR & Simulation',
     description:
-      'Build cross-API rendering and simulation layers (Vulkan, Metal, DX11/12) and developer tooling for XR and real-time visualization.',
+      'Build cross-API rendering, simulation layers, and developer tooling (Vulkan, Metal, DX11/12, OpenXR) for XR, medical, and real-time visualization products that push the hardware.',
   },
 ];
 

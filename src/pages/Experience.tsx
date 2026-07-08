@@ -13,7 +13,7 @@ export default function Experience() {
           20+ years of building impactful software
         </h1>
         <p className="mt-5 text-lg leading-relaxed text-slate-400">
-          A seasoned senior software engineer specialized in the architecture and optimization of
+          A seasoned senior software engineer skilled in the architecture and optimization of
           high-performance systems — from XR runtimes and medical visualization to additive
           manufacturing and game tooling.
         </p>
@@ -23,7 +23,7 @@ export default function Experience() {
           rel="noreferrer"
           className="mt-6 inline-flex items-center gap-2 rounded-lg border border-white/15 bg-white/5 px-4 py-2.5 text-sm font-semibold text-slate-200 transition-colors hover:border-white/25 hover:bg-white/10"
         >
-          <Download size={16} /> Download résumé (PDF)
+          <Download size={16} /> View Resume (PDF)
         </a>
       </header>
 
