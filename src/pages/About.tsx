@@ -112,10 +112,9 @@ export default function About() {
               over the Golden Gate Bridge and around the bay, and improv contact dancing.
             </p>
             <p>
-              I play a lot of Scrabble, and I genuinely enjoy tinkering with my solar roof and
-              keeping the plumbing in good working order. When I&rsquo;m reading, it&rsquo;s usually
-              a sci-fi novel or a history book about the evolution of technology and the making of
-              Silicon Valley.
+              Scrabble is a bit of an obsession, and tinkering with the solar roof or keeping the
+              plumbing in good working order is genuinely satisfying. I enjoy reading sci-fi novels
+              and history books about the evolution of technology and the making of Silicon Valley.
             </p>
           </div>
         </div>
