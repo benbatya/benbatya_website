@@ -2,7 +2,9 @@
 
 Follow-up to PR #13, which added the WebXR Robo Viz entry to the Case Studies page. This
 branch rewrites that entry's copy end to end, gives it a screenshot, and simplifies the
-`CaseStudy` shape that the rewrite exposed as redundant.
+`CaseStudy` shape that the rewrite exposed as redundant. It also crops the black padding
+off the pre-existing OSM screenshot — unrelated to the WebXR entry, but the same page and
+the same kind of fix, so it rides along rather than taking its own branch.
 
 ## What shipped
 
@@ -63,6 +65,15 @@ The original PNG was deleted from `public/`: Vite copies that directory verbatim
 so a copy was left in the session scratchpad as `webxr_poster_original.png` and the user was
 told it lives nowhere else.
 
+### The OSM screenshot
+
+`public/case-studies/osm-rendering.png` was cropped to remove the black padding around the
+captured window: 1330×758 → 1201×629, 116 KB → 105 KB. ImageMagick's `-trim` was no use
+here — the window has a soft drop shadow fading to black, so fuzz-trim stopped 9 px in at
+every threshold from 1% to 12%. The window rectangle was found instead from a luminance
+profile (first and last row/column exceeding a brightness threshold, stable across
+thresholds 60–150), giving 1201×629+64+52. Left as PNG, since only a crop was asked for.
+
 ## Decisions and corrections
 
 - **A bug from #13 was fixed here.** The title on `main` read "Robot Recordings in the
@@ -102,5 +113,6 @@ told it lives nowhere else.
 - This entry is now the longest on the page — three paragraphs, a screenshot and six
   highlights, against one paragraph and three or four bullets for the others. Reasonable for
   the lead item, but worth an eye on the layout.
-- The other three case-study images are still PNG/JPEG at 75–232 KB. The same WebP treatment
-  would shave a couple of hundred KB off the page; pre-existing, so left alone.
+- The fractal images are still PNG/JPEG at 75–232 KB, as is the newly cropped OSM
+  screenshot. The same WebP treatment would shave a couple of hundred KB off the page;
+  pre-existing, so left alone.
