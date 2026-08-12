@@ -1,5 +1,5 @@
 import type {LucideIcon} from 'lucide-react';
-import {Map, Zap, Sparkles, Github, ExternalLink} from 'lucide-react';
+import {Map, Zap, Sparkles, Glasses, Github, ExternalLink} from 'lucide-react';
 
 interface CaseStudy {
   icon: LucideIcon;
@@ -21,6 +21,25 @@ interface CaseStudy {
 }
 
 const caseStudies: CaseStudy[] = [
+  {
+    icon: Glasses,
+    eyebrow: 'WebXR · Robotics · Meta Quest',
+    title: 'Robot Recordings in the Glasses',
+    summary:
+      'A WebXR app for Meta Quest that plays back Foxglove MCAP robot recordings in AR passthrough — scrub the timeline, walk around the robot, and grab the scene to reposition it in your room. It also records headset and controller poses back out to MCAP for analysis alongside the robot data.',
+    body:
+      'The hard part is throughput: these recordings are hundreds of megabytes, and a headset has a mobile GPU and a 72 Hz frame budget to protect. The reader streams MCAP chunks in a Web Worker with preloading, so decoding never blocks the render loop, and cloud recordings download through a Cloudflare Worker relay that fetches only the topics you selected and caches them on-device. ROS 1 and protobuf datasets both decode: a 486 MB quadruped recording plays back with the Spot URDF posed from /tf and /joint_states and five camera streams projected in 3D, and a 718 MB robot-arm recording opens on the headset in half a second. On desktop the app installs IWER over navigator.xr — chosen by session capability, never by hostname — so a visitor without a headset still gets a drivable demo instead of a dead button.',
+    highlights: [
+      'In-headset AR playback of Foxglove MCAP recordings with timeline scrubbing and grab-to-move alignment.',
+      'Streaming MCAP reader in a Web Worker with preload, keeping large files off the render thread.',
+      'Cloudflare Worker relay streams only the selected topics from Foxglove cloud storage, with on-device caching.',
+      'ROS 1 and protobuf decoding: URDF models posed from /tf and /joint_states, plus projected camera streams.',
+      'Emulated WebXR runtime (IWER) on desktop, so the deployed site is a working demo without hardware.',
+    ],
+    tech: ['TypeScript', 'React Three Fiber', '@react-three/xr', 'WebXR', 'Foxglove MCAP', 'Cloudflare Workers', 'Vite'],
+    repoUrl: 'https://github.com/benbatya/webxr-robo-viz',
+    demoUrl: 'https://benbatya.github.io/webxr-robo-viz/',
+  },
   {
     icon: Map,
     eyebrow: 'Graphics · GPU Compute',
@@ -87,7 +106,8 @@ export default function CaseStudies() {
         </h1>
         <p className="mt-5 text-lg leading-relaxed text-slate-400">
           A few projects that show how I approach hard performance and precision problems — from
-          GPU-driven rendering to arbitrary-precision math in Rust.
+          streaming robot data into a headset to GPU-driven rendering and arbitrary-precision math
+          in Rust.
         </p>
       </header>
 
