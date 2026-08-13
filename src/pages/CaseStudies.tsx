@@ -5,17 +5,15 @@ interface CaseStudy {
   icon: LucideIcon;
   eyebrow: string;
   title: string;
-  /** Lead paragraph. */
-  summary: string;
-  /** Optional deeper technical paragraph. */
-  body?: string;
+  /** Prose paragraphs, rendered in order. The first is the lead; `image` follows it. */
+  body: string[];
   highlights: string[];
   tech: string[];
   repoUrl: string;
   demoUrl?: string;
   image?: string;
   imageAlt?: string;
-  /** Optional second image, shown after the technical body paragraph. */
+  /** Optional second image, shown after the last body paragraph. */
   bodyImage?: string;
   bodyImageAlt?: string;
 }
@@ -24,28 +22,33 @@ const caseStudies: CaseStudy[] = [
   {
     icon: Glasses,
     eyebrow: 'WebXR · Robotics · Meta Quest',
-    title: 'Robot Recordings in the Glasses',
-    summary:
-      'A WebXR app for Meta Quest that plays back Foxglove MCAP robot recordings in AR passthrough — scrub the timeline, walk around the robot, and grab the scene to reposition it in your room. It also records headset and controller poses back out to MCAP for analysis alongside the robot data.',
-    body:
-      'The hard part is throughput: these recordings are hundreds of megabytes, and a headset has a mobile GPU and a 72 Hz frame budget to protect. The reader streams MCAP chunks in a Web Worker with preloading, so decoding never blocks the render loop, and cloud recordings download through a Cloudflare Worker relay that fetches only the topics you selected and caches them on-device. ROS 1 and protobuf datasets both decode: a 486 MB quadruped recording plays back with the Spot URDF posed from /tf and /joint_states and five camera streams projected in 3D, and a 718 MB robot-arm recording opens on the headset in half a second. On desktop the app installs IWER over navigator.xr — chosen by session capability, never by hostname — so a visitor without a headset still gets a drivable demo instead of a dead button.',
+    title: 'Robotics Data Replay in Augmented Reality',
+    body: [
+      'A WebXR app for Meta Quest that plays back Foxglove robot recordings in AR passthrough — walk around the robot, scrub the timeline, and reposition the scene in your room. It is a direct overlay of robotic data on top of reality.',
+      'The hard part is throughput: these recordings run to hundreds of megabytes, while the headset brings a mobile GPU, limited bandwidth, and a 72 Hz frame budget that cannot slip without making the viewer queasy. Chunks decode off the render loop, so frame rate never pays for the data, and only the topics you select are pulled from the Foxglove server and cached on-device. On desktop the app runs in an emulated AR environment, so anyone without a headset can try it.',
+      'Known Examples: a quadruped — a 486 MB ROS 1 recording of Boston Dynamics’ Spot, its URDF posed live from transform frames while five camera streams project into the scene around it; autonomous manipulation — Foxglove’s 718 MB protobuf DROID arm dataset, which opens on the headset in half a second and renders its 27 transform frames in AR; and a dancing humanoid, playing back in the same viewer with no per-dataset code.',
+    ],
     highlights: [
-      'In-headset AR playback of Foxglove MCAP recordings with timeline scrubbing and grab-to-move alignment.',
-      'Streaming MCAP reader in a Web Worker with preload, keeping large files off the render thread.',
-      'Cloudflare Worker relay streams only the selected topics from Foxglove cloud storage, with on-device caching.',
-      'ROS 1 and protobuf decoding: URDF models posed from /tf and /joint_states, plus projected camera streams.',
-      'Emulated WebXR runtime (IWER) on desktop, so the deployed site is a working demo without hardware.',
+      'AR passthrough playback of Foxglove MCAP recordings, with timeline scrubbing and grab-to-move alignment for pinning the scene to a spot on the floor.',
+      'Streaming MCAP reader runs in a Web Worker with chunk preloading, so decoding a 700 MB recording never stalls the render loop.',
+      'A deployed Cloudflare Worker relay pulls only the selected topics out of Foxglove cloud storage — token-authenticated, with layouts and topic lists cached on-device for instant reopening.',
+      'Both MCAP encodings decode in-browser — ROS 1 and protobuf — with URDF models posed from /tf and /joint_states and camera images projected using Foxglove’s own camera model.',
+      'Frame-time readout in the in-headset HUD, so a performance regression is visible while wearing the device rather than after the fact.',
+      'Desktop visitors get an emulated WebXR runtime (IWER) installed over navigator.xr — selected by session capability rather than hostname, so a real headset is never emulated over.',
     ],
     tech: ['TypeScript', 'React Three Fiber', '@react-three/xr', 'WebXR', 'Foxglove MCAP', 'Cloudflare Workers', 'Vite'],
     repoUrl: 'https://github.com/benbatya/webxr-robo-viz',
     demoUrl: 'https://benbatya.github.io/webxr-robo-viz/',
+    image: '/case-studies/webxr_poster.webp',
+    imageAlt: 'In-headset capture of a Spot recording replayed in AR: the quadruped drawn with per-link transform axes, a projected camera stream beside it, and floating Transforms and playback panels.',
   },
   {
     icon: Map,
     eyebrow: 'Graphics · GPU Compute',
     title: 'Rendering OpenStreetMap on the GPU',
-    summary:
+    body: [
       'A C++/OpenGL renderer that loads large OpenStreetMap extracts and draws them efficiently by pushing geometry generation onto the GPU. A compute shader extrudes road "ways" into triangulated meshes in parallel, so even large maps render smoothly without a CPU bottleneck.',
+    ],
     highlights: [
       'Compute shader extrudes OSM ways into triangle meshes directly on the GPU.',
       'Two-stage parsing with libosmium: scan ways first, then load only the nodes they reference — keeping memory low for large extracts.',
@@ -60,8 +63,9 @@ const caseStudies: CaseStudy[] = [
     icon: Zap,
     eyebrow: 'Embedded · Energy Monitoring',
     title: 'Solar Time-of-Use Metering',
-    summary:
+    body: [
       'A home energy-monitoring app that logs and displays Time-of-Use statistics for a solar (PV) home. It runs continuously on a Raspberry Pi, polling a Shelly 3EM energy meter over the local network to gather power-usage data for tracking and billing.',
+    ],
     highlights: [
       'Polls a Shelly 3EM three-phase meter over the LAN for live power readings.',
       'Runs headless on a Raspberry Pi, with start/stop/deploy scripts for continuous operation.',
@@ -74,10 +78,10 @@ const caseStudies: CaseStudy[] = [
     icon: Sparkles,
     eyebrow: 'Rust · WebAssembly · WebGL',
     title: 'Deep-Zoom Fractal Explorer',
-    summary:
+    body: [
       'An interactive Julia-set explorer that stays razor-sharp at extreme zoom depths — far beyond where ordinary double-precision math falls apart. The heavy math runs in Rust compiled to WebAssembly, while rendering happens per-pixel on the GPU through WebGL2.',
-    body:
       'Precision is the whole game. The view center is stored in arbitrary-precision floats (dashu-float’s DBig), and the working precision scales automatically with zoom depth — roughly 20 digits at the default view, growing past 100 digits at a scale of 1e-100, with extra guard bits to absorb rounding. Each frame, Rust computes a single high-precision "reference orbit" from the center. The GPU then renders every pixel using perturbation theory: rather than iterating each pixel at full precision, the fragment shader tracks only a tiny f32 delta relative to the reference orbit, advancing it with the recurrence deltaᵢ₊₁ = 2·Zᵢ·deltaᵢ + deltaᵢ². Because every visible pixel sits close to the reference, that delta stays comfortably within f32 range no matter how deep you zoom. The orbit is shared with the GPU zero-copy through WASM linear memory, and zoom is cursor-anchored with all coordinate math done in DBig, so sub-pixel accuracy holds at any depth.',
+    ],
     highlights: [
       'Arbitrary-precision (DBig) center coordinates; working precision scales with zoom depth.',
       'One high-precision reference orbit per frame, computed in Rust/WASM.',
@@ -126,7 +130,7 @@ export default function CaseStudies() {
                   {study.eyebrow}
                 </p>
                 <h2 className="mt-2 font-display text-2xl font-bold text-white">{study.title}</h2>
-                <p className="mt-3 leading-relaxed text-slate-400">{study.summary}</p>
+                <p className="mt-3 leading-relaxed text-slate-400">{study.body[0]}</p>
                 {study.image && (
                   <img
                     src={study.image}
@@ -135,9 +139,11 @@ export default function CaseStudies() {
                     className="mt-5 w-full rounded-xl border border-white/10 bg-white/5"
                   />
                 )}
-                {study.body && (
-                  <p className="mt-4 leading-relaxed text-slate-400">{study.body}</p>
-                )}
+                {study.body.slice(1).map((paragraph) => (
+                  <p key={paragraph} className="mt-4 leading-relaxed text-slate-400">
+                    {paragraph}
+                  </p>
+                ))}
                 {study.bodyImage && (
                   <img
                     src={study.bodyImage}
